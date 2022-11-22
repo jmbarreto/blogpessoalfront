@@ -1,9 +1,17 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import { Title } from './components/Title/Title';
+import Text from './components/Text/Text';
 function App() {
-  return (
+  const nome = 'João Marcos';
+  return(
+    <>
+   <Title nome="João Marcos" />
+    <Text />
+    </>
+  );
+}
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -20,7 +28,6 @@ function App() {
         </a>
       </header>
     </div>
-  );
-}
+
 
 export default App;

@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import './Navbar.css'
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export default function ButtonAppBar() {
+export default function Navbar() {
   const classes = useStyles();
 
   return (
@@ -32,12 +33,20 @@ export default function ButtonAppBar() {
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
+           <Link to='/home'>
           <Typography variant="h6" className={classes.title}>
-            Blog Pessoal
+           Home
           </Typography>
+          </Link>
+          <Link to='about'>
+          <Typography variant="h6" className={classes.title}>
+           About  
+          </Typography>
+          </Link>
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </div>
   );
 }
+
